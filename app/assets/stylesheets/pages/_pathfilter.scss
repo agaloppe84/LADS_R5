@@ -1,0 +1,183 @@
+.pathfilter-fullpage {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(55,55,55,0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 23%;
+  padding-right: 23%;
+}
+
+.pathfilter-container {
+  width: 100%;
+  height: 60%;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 60px;
+}
+
+.pathfilter-header {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pathfilter-header-title {
+  font-size: 24px;
+  font-family: "Circular-Black";
+  color: rgba(55,55,55,0.8);
+}
+
+.pathfilter-email {
+  width: 100%;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pathfilter-email-title {
+  font-size: 18px;
+  font-family: "Circular-Book";
+  color: $green;
+}
+
+.pathfilter-choice {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.pathfilter-choice a {
+  width: 20%;
+  height: 50%;
+  transition: 0.4s ease;
+  &:hover {
+    color: $orange;
+  }
+}
+
+.pathfilter-choice a:hover .pathfilter-choice-title {
+  color: $orange;
+}
+
+.pathfilter-choice a:hover {
+  .pathfilter-choice-left {
+    border: 1px solid $orange;
+  }
+  .pathfilter-choice-right {
+    border: 1px solid $orange;
+  }
+}
+
+
+
+.pathfilter-choice-left {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 40px;
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+}
+
+.pathfilter-choice-right {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 40px;
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+}
+
+.pathfilter-choice-title {
+  font-size: 13px;
+  font-family: "Circular-Black";
+  color: rgba(55,55,55,0.9);
+  margin-top: 5px;
+  transition: 0.4s ease;
+}
+
+.pathfilter-bottom-link {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+.pathfilter-bottom-link a:hover {
+  color: $red;
+  border: 1px solid $red;
+}
+
+.pathfilter-bottom-btn {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 14px;
+  padding-right: 14px;
+  border-radius: 3px;
+  border: 1px solid lightgrey;
+  transition: 0.4s ease;
+}
+
+.pathfilter-bottom-btn-form {
+  background-color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 18px;
+  padding-right: 18px;
+  border-radius: 3px;
+  border: 1px solid lightgrey;
+  transition: 0.4s ease;
+  font-size: 14px;
+  font-family: "Circular-Medium";
+  color: rgba(55,55,55,0.8);
+  &:hover {
+    color: $red;
+    border: 1px solid $red;
+    background-color: white;
+  }
+}
+
+
+
+
+.pathfilter-choice-left-form {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.pathfilter-choice-right-form {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+
+

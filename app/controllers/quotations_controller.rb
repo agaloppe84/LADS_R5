@@ -1,6 +1,6 @@
 class QuotationsController < ApplicationController
   before_action :set_quotation, only: [:edit, :update, :destroy]
-  skip_before_action :authenticate_user!, only: [:new, :create, :show]
+  skip_before_action :authenticate_user!, only: [:new, :create, :show, :confirmation]
   before_action :set_typesname, only: [:new, :create]
 
 
@@ -39,6 +39,9 @@ class QuotationsController < ApplicationController
   def destroy
     @quotation.destroy
     redirect_to dashboard_path, notice: "Devis effacé : #{@quotation.id}"
+  end
+
+  def confirmation
   end
 
 

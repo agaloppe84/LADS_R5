@@ -19,12 +19,24 @@ class Quotation < ApplicationRecord
     end
   end
 
+  def self.all_year(year)
+    @all_year = Hash.new
+    @years = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
+    @years.each_with_index do |month, index|
+      if index == 11
+        @all_year["#{month}"] = (Quotation.where({ created_at: (DateTime.new(year,(index+1),1,1,0,0))..DateTime.new((year+1),1,1,1,0,0) })).count
+      else
+        @all_year["#{month}"] = (Quotation.where({ created_at: (DateTime.new(year,(index+1),1,1,0,0))..DateTime.new(year,(index+2),1,1,0,0) })).count
+      end
+    end
+    return @all_year
+  end
+
   def self.dynamic_quotation_counter(year)
       @typesname = Type.all.map { |type| type.name.capitalize }
       @all_year_categories = Hash.new
       @years = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
       @years.each_with_index do |month, index|
-        @category = 0
         @typesname.each_with_index do |type_name, type_index|
           @all_year_categories["#{month}_#{type_index+1}"] = ((Quotation.current_year_and_month_quotations(year, index + 1)).where(blindttype: "#{type_name}")).count
         end

@@ -1,0 +1,35 @@
+<div class="pathfilter-fullpage">
+  <div class="pathfilter-container">
+
+    <div class="pathfilter-header">
+      <div class="pathfilter-header-title">Bienvenue</div>
+    </div>
+
+    <div class="pathfilter-email">
+      <div class="pathfilter-email-title"><%= current_user.email %></div>
+    </div>
+
+    <div class="pathfilter-choice">
+
+      <%= link_to dashboard_path do %>
+        <div class="pathfilter-choice-left">
+          <i class="fa fa-reddit" aria-hidden="true"></i>
+          <div class="pathfilter-choice-title">Dashboard</div>
+        </div>
+      <% end %>
+
+      <%= link_to dashboard_quotations_path do %>
+        <div class="pathfilter-choice-right">
+          <i class="fa fa-openid" aria-hidden="true"></i>
+          <div class="pathfilter-choice-title">Devis</div>
+        </div>
+      <% end %>
+
+    </div>
+
+    <div class="pathfilter-bottom-link">
+      <%= link_to "Retour au menu", root_path, class: "pathfilter-bottom-btn" %>
+    </div>
+
+  </div>
+</div>

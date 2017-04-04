@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   get 'photos' => 'pages#photos'
   get 'dashboard' => 'pages#dashboard'
   get 'promotions' => 'pages#promotions'
-  get 'quotaconfirm' => 'pages#quotaconfirm'
+
 
   resources :types do
     resources :albums
@@ -26,8 +26,10 @@ Rails.application.routes.draw do
     end
   end
   resources :quotations, only: [:index, :new, :create, :edit, :update]
+  get 'confirmation', to: 'quotations#confirmation'
+
   resources :promos, only: [:index]
-  get 'confirmation', to: 'quotations#show'
+
 
 
 

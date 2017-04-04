@@ -1,0 +1,52 @@
+
+
+<div class="analytics-fullpage">
+
+  <div class="analytics-top-container">
+    <div class="ana-top-cont-text">Analytics</div>
+    <div class="ana-top-cont-text-thin-absolute">Demandes de devis</div>
+  </div>
+
+  <div class="analytics-bottom-container">
+
+    <div class="analytics-bottom-left">
+      <div class="quot-receiver-header">
+        <div class="quot-stats-text">Année</div>
+        <div class="quot-stats-text-month"><%= @current_year %></div>
+      </div>
+      <div class="overflow-block">
+        <% @full_years.each do |month| %>
+          <div class="quotgraph-abs-button">
+            <div class="quotgraph-header-month">
+              <div class="quotgraph-header-month-text"><%= t(month) %></div>
+            </div>
+            <%= render partial: "quotgraph", locals: {month: @current_full_year["#{month}"]} %>
+            <div class="quotgraph-trigger-<%= month %> cool-trigger">Détails</div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <% @full_years.each do |month| %>
+
+      <div class="analytics-bottom-right quotgraph-receiver-<%= month %>">
+        <div class="quot-receiver-header">
+          <div class="quot-stats-text">Statistics</div>
+          <div class="quot-stats-text-month"><%= t(month) %></div>
+        </div>
+        <div class="overflow-block">
+          <% @types_full_names.each_with_index do |type, index| %>
+            <div class="quotgraph-header-month-sm">
+              <div class="quotgraph-header-month-text-sm"><%= composed_plurname(type) %></div>
+            </div>
+            <%= render partial: "quotgraph_by_category", locals: {month: @current_year_quotations["#{month}_#{index+1}"]} %>
+          <% end %>
+        </div>
+      </div>
+
+    <% end %>
+
+
+
+  </div>
+</div>
