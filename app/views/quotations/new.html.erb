@@ -1,0 +1,96 @@
+
+
+
+<div class="quota-layout-header">
+  <div class="quota-layout-header-text">Devis gratuit</div>
+  <div class="quota-layout-header-text-thin">réponse sous 48h</div>
+</div>
+
+
+
+
+<div class="quota-form-fullpage">
+  <%= simple_form_for (@quotation) do |f| %>
+
+    <div class="quota-form-layout-one">
+      <div class="quota-form-layout-one-flex ff-flex-top">
+        <div class="quota-form-label quota-email">
+          <i class="fa fa-envelope-o" aria-hidden="true"></i>
+          <div class="small-quota-icon">Email</div>
+        </div>
+        <%= f.input :email, label: false %>
+      </div>
+      <div class="quota-form-layout-one-flex ff-flex-top">
+        <div class="quota-form-label quota-phone">
+          <i class="fa fa-phone" aria-hidden="true"></i>
+          <div class="small-quota-icon">Téléphone</div>
+        </div>
+        <%= f.input :phone, label: false %>
+      </div>
+      <div class="quota-form-layout-one-flex ff-flex-top">
+        <div class="quota-form-label quota-blindttype">
+          <i class="fa fa-product-hunt" aria-hidden="true"></i>
+          <div class="small-quota-icon">Produit</div>
+        </div>
+        <%= f.input :blindttype, collection: @typesname, label: false %>
+      </div>
+    </div>
+
+    <div class="quota-form-layout-one">
+      <div class="quota-form-layout-one-flex">
+        <div class="quota-form-label quota-name">
+          <i class="fa fa-male" aria-hidden="true"></i>
+          <div class="small-quota-icon">Nom</div>
+        </div>
+        <%= f.input :name, label: false %>
+      </div>
+      <div class="quota-form-layout-one-flex">
+        <div class="quota-form-label quota-firstname">
+          <i class="fa fa-male" aria-hidden="true"></i>
+          <div class="small-quota-icon">Prénom</div>
+        </div>
+        <%= f.input :firstname, label: false %>
+      </div>
+    </div>
+
+    <div class="quota-form-layout-one">
+      <div class="quota-form-layout-one-flex ff-flex-start">
+        <div class="quota-form-label quota-city">
+          <i class="fa fa-location-arrow" aria-hidden="true"></i>
+          <div class="small-quota-icon">Ville</div>
+        </div>
+        <%= f.input :city, label: false %>
+      </div>
+      <div class="quota-form-layout-one-flex ff-flex-middle">
+        <div class="quota-form-label quota-zipcode">
+          <i class="fa fa-location-arrow" aria-hidden="true"></i>
+          <div class="small-quota-icon">Code postal</div>
+        </div>
+        <%= f.input :zipcode, label: false %>
+      </div>
+      <div class="quota-form-layout-one-flex ff-flex-end">
+        <div class="quota-form-label quota-address">
+          <i class="fa fa-location-arrow" aria-hidden="true"></i>
+          <div class="small-quota-icon">Adresse</div>
+        </div>
+        <%= f.input :address, label: false %>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+      <div class="quota-form-label quota-message">
+        <i class="fa fa-commenting-o" aria-hidden="true"></i>
+        <div class="small-quota-icon">Message</div>
+      </div>
+      <%= f.input :message, label: false %>
+
+      <%= f.submit "Envoyer", :class => 'submit-button-on-quotation' %>
+
+  <% end %>
+</div>

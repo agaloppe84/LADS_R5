@@ -1,0 +1,10 @@
+
+<div class="confirmation-fullpage">
+  <div class="conf-fullpage-item">
+    <div class="conf-text"><%= "Merci #{(params[:name]).capitalize} #{params[:firstname]}" %></div>
+    <div class="conf-text-small"><%= "Un email de confirmation a été envoyé à" %></div>
+    <div class="conf-text-email"><%= "#{params[:email]}" %></div>
+    <i class="fa fa-check-circle-o bigsize animated fadeIn" aria-hidden="true"></i>
+    <div class="conf-abs-container"><%= link_to "Revenir au menu", root_path, class: "confirm-button" %></div>
+  </div>
+</div>
